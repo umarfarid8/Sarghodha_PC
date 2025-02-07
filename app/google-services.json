@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "585224779997",
+    "project_id": "sarghodha-pc",
+    "storage_bucket": "sarghodha-pc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:585224779997:android:ea7c4a60068be237034334",
+        "android_client_info": {
+          "package_name": "com.UZdevelopers.sarghodhapc"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYgHq1-b_lmItHwX-Oa06t1cL8_npD8ok"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
