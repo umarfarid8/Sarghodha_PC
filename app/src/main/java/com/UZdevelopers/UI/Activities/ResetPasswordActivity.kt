@@ -1,15 +1,13 @@
-package com.UZdevelopers.ui.Auth
+package com.UZdevelopers.UI.Activities
 
 import android.app.ProgressDialog
 import android.content.DialogInterface
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.lifecycleScope
-import com.UZdevelopers.sarghodhapc.R
+import com.UZdevelopers.ViewModels.AuthViewModel
 import com.UZdevelopers.sarghodhapc.databinding.ActivityResetPasswordBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.coroutines.launch
@@ -52,24 +50,24 @@ class ResetPasswordActivity : AppCompatActivity() {
             }
         }
 
+        binding.loginBack.setOnClickListener {
+            startActivity(Intent(this, LoginActivity::class.java))
+            finish()
+        }
 
-//        binding.signupTxt.setOnClickListener {
-        //          finish()
-        //    }
-//
-        //      binding.loginbtn.setOnClickListener {
-        //        val email=binding.email.editText?.text.toString()
-//
-        //          if(!email.contains("@")){
-        //            Toast.makeText(this,"Invalid Email", Toast.LENGTH_SHORT).show()
-        //          return@setOnClickListener
-        //    }
+        binding.restPasswordbtn.setOnClickListener {
+            val email=binding.forgetPassword.editText?.text.toString()
 
-        //  progressDialog.show()
-//
-        //          viewModel.resetPassword(email)
-//
-        //      }
+            if(!email.contains("@")){
+                Toast.makeText(this,"Invalid Email", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            progressDialog.show()
+
+            viewModel.resetPassword(email)
+
+        }
 
 
     }

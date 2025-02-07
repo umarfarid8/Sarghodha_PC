@@ -1,18 +1,16 @@
-package com.UZdevelopers.ui.Auth
+package com.UZdevelopers.UI.Activities
 
 import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.lifecycleScope
-import com.UZdevelopers.sarghodhapc.MainActivity
-import com.UZdevelopers.sarghodhapc.R
+import com.UZdevelopers.ViewModels.AuthViewModel
 import com.UZdevelopers.sarghodhapc.databinding.ActivityLoginBinding
 import kotlinx.coroutines.launch
+
 
 class LoginActivity : AppCompatActivity() {
     lateinit var progressDialog: ProgressDialog
@@ -25,8 +23,8 @@ class LoginActivity : AppCompatActivity() {
 
         viewModel= AuthViewModel()
         viewModel.checkUser()
-
-        progressDialog= ProgressDialog(this)
+//         viewModel.getCurrentUser()
+        progressDialog=ProgressDialog(this)
         progressDialog.setMessage("Please wait while we check your credentials...")
         progressDialog.setCancelable(false)
 
@@ -38,43 +36,42 @@ class LoginActivity : AppCompatActivity() {
                 }
             }
         }
-
         lifecycleScope.launch {
             viewModel.currentUser.collect{
                 if (it!=null){
                     progressDialog.dismiss()
                     startActivity(Intent(this@LoginActivity, MainActivity::class.java))
+//                    viewModel.loadUser()
                     finish()
                 }
             }
         }
+//        AuthRepository().signup("Zhair Ahmad", "zhairdeveloper@gmail.com", "03444390314", "123456")
 
-        binding.signupTxt.setOnClickListener {
-            startActivity(Intent(this, SignupActivity::class.java))
+        binding.forget.setOnClickListener {
+            startActivity(Intent(this, ResetPasswordActivity::class.java))
             finish()
         }
-        binding.forgetPassword.setOnClickListener {
-            startActivity(Intent(this, ResetPasswordActivity::class.java))
-        }
-
         binding.loginbtn.setOnClickListener {
-            val email=binding.email.editText?.text.toString()
+            val email=binding.name.editText?.text.toString()
             val password=binding.password.editText?.text.toString()
 
+            Log.i("signT", email)
+            Log.i("signT", password)
+
             if(!email.contains("@")){
-                Toast.makeText(this,"Invalid Email", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,"Invalid Email",Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
             if(password.length<6){
-                Toast.makeText(this,"Password must be atleast 6 characters", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,"Password must be at least 6 characters",Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
             progressDialog.show()
 
             viewModel.login(email,password)
-
         }
 
-
-    }}
+    }
+}
