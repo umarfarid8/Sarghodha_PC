@@ -13,6 +13,9 @@
         android:theme="@style/Base.Theme.SarghodhaPC"
         tools:targetApi="31">
         <activity
+            android:name=".FragmentWeightmentAssistant"
+            android:exported="false" />
+        <activity
             android:name="com.UZdevelopers.UI.Activities.ResetPasswordActivity"
             android:exported="false" />
         <activity
@@ -20,7 +23,6 @@
             android:exported="false" />
         <activity
             android:name="com.UZdevelopers.UI.Activities.MainActivity"
-
             android:exported="false" />
         <activity
             android:name="com.UZdevelopers.UI.Activities.LoginActivity"
