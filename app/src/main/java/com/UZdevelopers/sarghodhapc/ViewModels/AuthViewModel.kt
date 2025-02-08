@@ -1,11 +1,11 @@
-package com.UZdevelopers.ViewModels
+package com.UZdevelopers.sarghodhapc.ViewModels
 
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.UZdevelopers.Repositories.AuthRepository
-import com.UZdevelopers.UI.Activities.MainActivity
-import com.UZdevelopers.UI.ModelClass.Users
+import com.UZdevelopers.sarghodhapc.Repositories.AuthRepository
+import com.UZdevelopers.sarghodhapc.UI.Activities.MainActivity
+import com.UZdevelopers.sarghodhapc.UI.ModelClass.Users
 
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.launch
@@ -91,9 +91,11 @@ class AuthViewModel : ViewModel(){
 
     fun loadUser(){
         viewModelScope.launch {
+
             val result=AuthRepository.loadUser()
             if (result.isSuccess){
                 currentUser.value=result.getOrThrow()
+                MainActivity.user=result.getOrThrow()
 //                Log.i("test1",currentUser.value.toString())
             }else{
                 failureMessage.value=result.exceptionOrNull()?.message
@@ -113,11 +115,14 @@ class AuthViewModel : ViewModel(){
     }
     fun login(email:String,password:String){
         viewModelScope.launch {
+
             val result=AuthRepository.login(email,password)
-//            AuthRepository().signup("Zhair Ahmad", "zhairdeveloper@gmail.com", "03444390314", "123456")
+//            val result= AuthRepository().signup("Zhair Ahmad", "zhairdeveloper@gmail.com", "1234567999", "123456")
+
             if (result.isSuccess){
                 val result2=AuthRepository.loadUser()
                 if (result2.isSuccess){
+
                     MainActivity.user=result2.getOrThrow()
                     currentUser.value=result2.getOrThrow()
                 }else{

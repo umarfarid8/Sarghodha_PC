@@ -1,7 +1,7 @@
-package com.UZdevelopers.Repositories
+package com.UZdevelopers.sarghodhapc.Repositories
 
 import android.util.Log
-import com.UZdevelopers.UI.ModelClass.Users
+import com.UZdevelopers.sarghodhapc.UI.ModelClass.Users
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.userProfileChangeRequest
 import com.google.firebase.firestore.FirebaseFirestore
@@ -130,7 +130,6 @@ class AuthRepository {
                 Result.success(user)
             } else {
                 Result.success(null) // No matching user found
-
             }
         } catch (e: Exception) {
             // Handle any exceptions during the operation
