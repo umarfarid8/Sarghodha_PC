@@ -1,16 +1,12 @@
-package com.UZdevelopers.ui.Auth
+package com.UZdevelopers.UI.Activities
 
 import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.lifecycleScope
-import com.UZdevelopers.sarghodhapc.MainActivity
-import com.UZdevelopers.sarghodhapc.R
+import com.UZdevelopers.ViewModels.AuthViewModel
 import com.UZdevelopers.sarghodhapc.databinding.ActivitySignupBinding
 import kotlinx.coroutines.launch
 
@@ -39,19 +35,19 @@ class SignupActivity : AppCompatActivity() {
             }
         }
 
-        lifecycleScope.launch {
-            viewModel.currentUser.collect{
-                if (it!=null){
-                    progressDialog.dismiss()
-                    startActivity(Intent(this@SignupActivity, MainActivity::class.java))
-                    finish()
-                }
-            }
-        }
+//        lifecycleScope.launch {
+//            viewModel.currentUser.collect{
+//                if (it!=null){
+//                    progressDialog.dismiss()
+//                    startActivity(Intent(this@SignupActivity, MainActivity::class.java))
+//                    finish()
+//                }
+//            }
+//        }
 
 
         binding.signupTxt.setOnClickListener {
-            startActivity(Intent(this, LoginActivity::class.java))
+//            startActivity(Intent(this, LoginActivity::class.java))
             finish()
         }
 
@@ -80,7 +76,7 @@ class SignupActivity : AppCompatActivity() {
 
             progressDialog.show()
 
-            viewModel.signUp(email,password,name)
+//            viewModel.signUp(email,password,name)
 
         }
 
