@@ -6,5 +6,219 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".UI.Activities.Add_Unloading_Form">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Details"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintMarginTop="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!-- Entry Permit -->
+                <TextView
+                    android:id="@+id/tv_entry_permit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Entry Permit #"
+                    android:textStyle="bold"
+                    app:layout_constraintMarginStart="16dp"
+                    app:layout_constraintMarginTop="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_details" />
+
+                <EditText
+                    android:id="@+id/et_entry_permit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:hint="Enter Entry Permit #"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintMarginEnd="16dp"
+                    app:layout_constraintMarginStart="16dp"
+                    app:layout_constraintMarginTop="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_entry_permit" />
+
+                <!-- Stack Number -->
+                <TextView
+                    android:id="@+id/tv_stack_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Stack Number"
+                    android:textStyle="bold"
+                    app:layout_constraintMarginStart="16dp"
+                    app:layout_constraintMarginTop="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/et_entry_permit" />
+
+                <EditText
+                    android:id="@+id/et_stack_number"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:hint="Enter Stack Number"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintMarginEnd="16dp"
+                    app:layout_constraintMarginStart="16dp"
+                    app:layout_constraintMarginTop="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_stack_number" />
+
+                <!-- Gross Weight (Read Only) -->
+                <TextView
+                    android:id="@+id/tv_gross_weight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Gross Weight"
+                    android:textStyle="bold"
+                    app:layout_constraintMarginStart="16dp"
+                    app:layout_constraintMarginTop="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/et_stack_number" />
+
+                <TextView
+                    android:id="@+id/tv_gross_weight_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Read Only"
+                    android:textStyle="italic"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintMarginEnd="16dp"
+                    app:layout_constraintMarginStart="16dp"
+                    app:layout_constraintMarginTop="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_gross_weight" />
+
+                <!-- Moisture % (Read Only) -->
+                <TextView
+                    android:id="@+id/tv_moisture"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Moisture %"
+                    android:textStyle="bold"
+                    app:layout_constraintMarginStart="16dp"
+                    app:layout_constraintMarginTop="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_gross_weight_value" />
+
+                <TextView
+                    android:id="@+id/tv_moisture_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Read Only"
+                    android:textStyle="italic"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintMarginEnd="16dp"
+                    app:layout_constraintMarginStart="16dp"
+                    app:layout_constraintMarginTop="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_moisture" />
+
+                <!-- Sand % (Read Only) -->
+                <TextView
+                    android:id="@+id/tv_sand"
+                    android:layout_width="48dp"
+                    android:layout_height="26dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Sand %"
+                    android:textStyle="bold"
+                    app:layout_constraintMarginStart="16dp"
+                    app:layout_constraintMarginTop="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_moisture_value" />
+
+                <TextView
+                    android:id="@+id/tv_sand_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Read Only"
+                    android:textStyle="italic"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintMarginEnd="16dp"
+                    app:layout_constraintMarginStart="16dp"
+                    app:layout_constraintMarginTop="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_sand" />
+
+                <!-- Deduction (Read Only) -->
+                <TextView
+                    android:id="@+id/tv_deduction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Deduction"
+                    android:textStyle="bold"
+                    app:layout_constraintMarginStart="16dp"
+                    app:layout_constraintMarginTop="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_sand_value" />
+
+                <TextView
+                    android:id="@+id/tv_deduction_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Read Only"
+                    android:textStyle="italic"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintMarginEnd="16dp"
+                    app:layout_constraintMarginStart="16dp"
+                    app:layout_constraintMarginTop="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_deduction" />
+
+                <!-- Submit Button -->
+                <Button
+                    android:id="@+id/btn_submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="Submit"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintMarginBottom="24dp"
+                    app:layout_constraintMarginTop="24dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_deduction_value" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
