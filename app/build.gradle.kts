@@ -61,6 +61,8 @@ dependencies {
     implementation("com.google.firebase:firebase-firestore")
     implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
     implementation ("org.jetbrains.kotlin:kotlin-stdlib:2.1.0")
+    implementation ("androidx.appcompat:appcompat:1.6.1")
+    implementation ("androidx.fragment:fragment-ktx:1.6.2")
 
 
 

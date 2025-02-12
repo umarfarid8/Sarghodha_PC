@@ -1,4 +1,4 @@
-package com.UZdevelopers.UI.ModelClass
+package com.UZdevelopers.sarghodhapc.UI.ModelClass
 
 class Users (
     var id:String?=null,

@@ -13,19 +13,25 @@
         android:theme="@style/Base.Theme.SarghodhaPC"
         tools:targetApi="31">
         <activity
-            android:name=".FragmentWeightmentAssistant"
+            android:name=".UI.Activities.Add_Weighment_Form"
             android:exported="false" />
         <activity
-            android:name="com.UZdevelopers.UI.Activities.ResetPasswordActivity"
+            android:name=".UI.Activities.SelectMaterial"
             android:exported="false" />
         <activity
-            android:name="com.UZdevelopers.UI.Activities.SignupActivity"
+            android:name=".UI.Fragments.FragmentWeightmentAssistant"
             android:exported="false" />
         <activity
-            android:name="com.UZdevelopers.UI.Activities.MainActivity"
+            android:name=".UI.Activities.ResetPasswordActivity"
             android:exported="false" />
         <activity
-            android:name="com.UZdevelopers.UI.Activities.LoginActivity"
+            android:name=".UI.Activities.SignupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UI.Activities.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UI.Activities.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

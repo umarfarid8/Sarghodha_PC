@@ -1,4 +1,4 @@
-package com.UZdevelopers.UI.Activities
+package com.UZdevelopers.sarghodhapc.UI.Activities
 
 import android.app.ProgressDialog
 import android.content.DialogInterface
@@ -7,7 +7,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
-import com.UZdevelopers.ViewModels.AuthViewModel
+import com.UZdevelopers.sarghodhapc.ViewModels.AuthViewModel
 import com.UZdevelopers.sarghodhapc.databinding.ActivityResetPasswordBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.coroutines.launch

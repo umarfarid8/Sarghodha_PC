@@ -4,199 +4,202 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".WeightmentAssistantFragment">
+    tools:context=".UI.Fragments.FragmentWeightmentAssistant">
 
     <!-- Material Name -->
-    <TextView
-        android:id="@+id/tv_material_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Material Name"
-        android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintMarginTop="16dp"
-        app:layout_constraintMarginStart="16dp" />
+<!--    <TextView-->
+<!--        android:id="@+id/tv_material_name"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Material Name"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintMarginTop="16dp"-->
+<!--        app:layout_constraintMarginStart="16dp" />-->
 
-    <Spinner
-        android:id="@+id/spinner_material_name"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:entries="@array/material_names"
-        app:layout_constraintTop_toBottomOf="@id/tv_material_name"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintMarginTop="8dp"
-        app:layout_constraintMarginStart="16dp"
-        app:layout_constraintMarginEnd="16dp" />
+    <!--    <Spinner-->
+    <!--        android:id="@+id/spinner_material_name"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:entries="@array/material_names"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/tv_material_name"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintMarginTop="8dp"-->
+    <!--        app:layout_constraintMarginStart="16dp"-->
+    <!--        app:layout_constraintMarginEnd="16dp" />-->
 
-    <!-- Date (Auto-generated) -->
-    <TextView
-        android:id="@+id/tv_date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Date"
-        android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/spinner_material_name"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintMarginTop="16dp"
-        app:layout_constraintMarginStart="16dp" />
+<!--     Date (Auto-generated)-->
 
-    <TextView
-        android:id="@+id/tv_date_value"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Auto-generated"
-        android:textStyle="italic"
-        app:layout_constraintTop_toBottomOf="@id/tv_date"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintMarginTop="8dp"
-        app:layout_constraintMarginStart="16dp" />
+<!--    <TextView-->
+<!--        android:id="@+id/tv_date"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Date"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/tv_date_value"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/tv_material_name"-->
+<!--        app:layout_constraintMarginStart="16dp"-->
+<!--        app:layout_constraintMarginTop="16dp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tv_date_value"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Auto-generated"-->
+<!--        android:textStyle="italic"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/tv_date"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintMarginTop="8dp"-->
+<!--        app:layout_constraintMarginStart="16dp" />-->
 
     <!-- Vendor Name -->
-    <EditText
-        android:id="@+id/et_vendor_name"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Vendor Name"
-        app:layout_constraintTop_toBottomOf="@id/tv_date_value"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintMarginTop="16dp"
-        app:layout_constraintMarginStart="16dp"
-        app:layout_constraintMarginEnd="16dp" />
+<!--    <EditText-->
+<!--        android:id="@+id/et_vendor_name"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Vendor Name"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/tv_date_value"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintMarginTop="16dp"-->
+<!--        app:layout_constraintMarginStart="16dp"-->
+<!--        app:layout_constraintMarginEnd="16dp" />-->
 
     <!-- Vendor Number -->
-    <EditText
-        android:id="@+id/et_vendor_number"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Vendor Number"
-        app:layout_constraintTop_toBottomOf="@id/et_vendor_name"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintMarginTop="8dp"
-        app:layout_constraintMarginStart="16dp"
-        app:layout_constraintMarginEnd="16dp" />
+<!--    <EditText-->
+<!--        android:id="@+id/et_vendor_number"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Vendor Number"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/et_vendor_name"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintMarginTop="8dp"-->
+<!--        app:layout_constraintMarginStart="16dp"-->
+<!--        app:layout_constraintMarginEnd="16dp" />-->
 
     <!-- Entry Permit -->
-    <EditText
-        android:id="@+id/et_entry_permit"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Entry Permit #"
-        app:layout_constraintTop_toBottomOf="@id/et_vendor_number"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintMarginTop="8dp"
-        app:layout_constraintMarginStart="16dp"
-        app:layout_constraintMarginEnd="16dp" />
+<!--    <EditText-->
+<!--        android:id="@+id/et_entry_permit"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Entry Permit #"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/et_vendor_number"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintMarginTop="8dp"-->
+<!--        app:layout_constraintMarginStart="16dp"-->
+<!--        app:layout_constraintMarginEnd="16dp" />-->
 
     <!-- Vehicle Type -->
-    <EditText
-        android:id="@+id/et_vehicle_type"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Vehicle Type"
-        app:layout_constraintTop_toBottomOf="@id/et_entry_permit"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintMarginTop="8dp"
-        app:layout_constraintMarginStart="16dp"
-        app:layout_constraintMarginEnd="16dp" />
+<!--    <EditText-->
+<!--        android:id="@+id/et_vehicle_type"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Vehicle Type"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/et_entry_permit"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintMarginTop="8dp"-->
+<!--        app:layout_constraintMarginStart="16dp"-->
+<!--        app:layout_constraintMarginEnd="16dp" />-->
 
     <!-- Vehicle Number -->
-    <EditText
-        android:id="@+id/et_vehicle_number"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Vehicle Number"
-        app:layout_constraintTop_toBottomOf="@id/et_vehicle_type"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintMarginTop="8dp"
-        app:layout_constraintMarginStart="16dp"
-        app:layout_constraintMarginEnd="16dp" />
+<!--    <EditText-->
+<!--        android:id="@+id/et_vehicle_number"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Vehicle Number"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/et_vehicle_type"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintMarginTop="8dp"-->
+<!--        app:layout_constraintMarginStart="16dp"-->
+<!--        app:layout_constraintMarginEnd="16dp" />-->
 
     <!-- Gross Weight -->
-    <EditText
-        android:id="@+id/et_gross_weight"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Gross Weight"
-        android:inputType="numberDecimal"
-        app:layout_constraintTop_toBottomOf="@id/et_vehicle_number"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintMarginTop="8dp"
-        app:layout_constraintMarginStart="16dp"
-        app:layout_constraintMarginEnd="16dp" />
+<!--    <EditText-->
+<!--        android:id="@+id/et_gross_weight"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Gross Weight"-->
+<!--        android:inputType="numberDecimal"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/et_vehicle_number"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintMarginTop="8dp"-->
+<!--        app:layout_constraintMarginStart="16dp"-->
+<!--        app:layout_constraintMarginEnd="16dp" />-->
 
     <!-- Tare Weight -->
-    <EditText
-        android:id="@+id/et_tare_weight"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Tare Weight"
-        android:inputType="numberDecimal"
-        app:layout_constraintTop_toBottomOf="@id/et_gross_weight"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintMarginTop="8dp"
-        app:layout_constraintMarginStart="16dp"
-        app:layout_constraintMarginEnd="16dp" />
+<!--    <EditText-->
+<!--        android:id="@+id/et_tare_weight"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Tare Weight"-->
+<!--        android:inputType="numberDecimal"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/et_gross_weight"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintMarginTop="8dp"-->
+<!--        app:layout_constraintMarginStart="16dp"-->
+<!--        app:layout_constraintMarginEnd="16dp" />-->
 
     <!-- Net Weight -->
-    <EditText
-        android:id="@+id/et_net_weight"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Net Weight"
-        android:inputType="numberDecimal"
-        app:layout_constraintTop_toBottomOf="@id/et_tare_weight"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintMarginTop="8dp"
-        app:layout_constraintMarginStart="16dp"
-        app:layout_constraintMarginEnd="16dp" />
+<!--    <EditText-->
+<!--        android:id="@+id/et_net_weight"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Net Weight"-->
+<!--        android:inputType="numberDecimal"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/et_tare_weight"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintMarginTop="8dp"-->
+<!--        app:layout_constraintMarginStart="16dp"-->
+<!--        app:layout_constraintMarginEnd="16dp" />-->
 
     <!-- Deduction % (Read Only) -->
-    <TextView
-        android:id="@+id/tv_deduction"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Deduction % (Auto)"
-        app:layout_constraintTop_toBottomOf="@id/et_net_weight"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintMarginTop="8dp"
-        app:layout_constraintMarginStart="16dp"
-        app:layout_constraintMarginEnd="16dp" />
+<!--    <TextView-->
+<!--        android:id="@+id/tv_deduction"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Deduction % (Auto)"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/et_net_weight"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintMarginTop="8dp"-->
+<!--        app:layout_constraintMarginStart="16dp"-->
+<!--        app:layout_constraintMarginEnd="16dp" />-->
 
     <!-- Payable Weight (Read Only) -->
-    <TextView
-        android:id="@+id/tv_payable_weight"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Payable Weight (Auto)"
-        app:layout_constraintTop_toBottomOf="@id/tv_deduction"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintMarginTop="8dp"
-        app:layout_constraintMarginStart="16dp"
-        app:layout_constraintMarginEnd="16dp" />
+<!--    <TextView-->
+<!--        android:id="@+id/tv_payable_weight"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Payable Weight (Auto)"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/tv_deduction"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintMarginTop="8dp"-->
+<!--        app:layout_constraintMarginStart="16dp"-->
+<!--        app:layout_constraintMarginEnd="16dp" />-->
 
     <!-- Stack Number (Read Only) -->
-    <TextView
-        android:id="@+id/tv_stack_number"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Stack Number (Read Only)"
-        app:layout_constraintTop_toBottomOf="@id/tv_payable_weight"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintMarginTop="8dp"
-        app:layout_constraintMarginStart="16dp"
-        app:layout_constraintMarginEnd="16dp" />
+<!--    <TextView-->
+<!--        android:id="@+id/tv_stack_number"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Stack Number (Read Only)"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/tv_payable_weight"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintMarginTop="8dp"-->
+<!--        app:layout_constraintMarginStart="16dp"-->
+<!--        app:layout_constraintMarginEnd="16dp" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

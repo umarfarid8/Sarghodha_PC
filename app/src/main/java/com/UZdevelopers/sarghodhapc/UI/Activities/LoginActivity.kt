@@ -1,14 +1,16 @@
-package com.UZdevelopers.UI.Activities
+package com.UZdevelopers.sarghodhapc.UI.Activities
 
 import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
-import com.UZdevelopers.ViewModels.AuthViewModel
+import com.UZdevelopers.sarghodhapc.ViewModels.AuthViewModel
 import com.UZdevelopers.sarghodhapc.databinding.ActivityLoginBinding
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.coroutines.launch
 
 
@@ -22,11 +24,12 @@ class LoginActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         viewModel= AuthViewModel()
-        viewModel.checkUser()
-//         viewModel.getCurrentUser()
+//        viewModel.checkUser()
         progressDialog=ProgressDialog(this)
         progressDialog.setMessage("Please wait while we check your credentials...")
         progressDialog.setCancelable(false)
+
+
 
         lifecycleScope.launch {
             viewModel.failureMessage.collect{
@@ -46,12 +49,19 @@ class LoginActivity : AppCompatActivity() {
                 }
             }
         }
-//        AuthRepository().signup("Zhair Ahmad", "zhairdeveloper@gmail.com", "03444390314", "123456")
+        if( FirebaseAuth.getInstance().currentUser != null) {
+            progressDialog.setMessage("Loading Profile...")
+            progressDialog.show()
+            viewModel.loadUser()
+        }
+
+//        AuthRepository().signup("Zhair Ahmad", " umerfarid034@gmail.com ", "03444390314", "123456")
 
         binding.forget.setOnClickListener {
             startActivity(Intent(this, ResetPasswordActivity::class.java))
             finish()
         }
+
         binding.loginbtn.setOnClickListener {
             val email=binding.name.editText?.text.toString()
             val password=binding.password.editText?.text.toString()

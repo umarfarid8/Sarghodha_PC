@@ -1,9 +1,9 @@
-package com.UZdevelopers.ViewModels
+package com.UZdevelopers.sarghodhapc.ViewModels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.UZdevelopers.Repositories.AuthRepository
-import com.UZdevelopers.UI.ModelClass.Users
+import com.UZdevelopers.sarghodhapc.Repositories.AuthRepository
+import com.UZdevelopers.sarghodhapc.UI.ModelClass.Users
 import com.google.firebase.auth.FirebaseUser
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.launch
