@@ -118,8 +118,124 @@
                 android:inputType="numberDecimal"
                 android:layout_marginBottom="16dp" />
 
+            <!-- Color Selection -->
+            <TextView
+                android:id="@+id/tv_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Color"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp" />
+
+            <RadioGroup
+                android:id="@+id/rg_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <RadioButton
+                    android:id="@+id/rb_light_brown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Light Brown" />
+
+                <RadioButton
+                    android:id="@+id/rb_dark_brown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dark Brown" />
+            </RadioGroup>
+
+            <!-- Status Selection -->
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp" />
+
+            <RadioGroup
+                android:id="@+id/rg_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <RadioButton
+                    android:id="@+id/rb_accepted"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Accepted" />
+
+                <RadioButton
+                    android:id="@+id/rb_balance_hold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Balance Hold" />
+                <RadioButton
+                    android:id="@+id/rb_hold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hold" />
+            </RadioGroup>
+
+            <!-- Deduction -->
+            <TextView
+                android:id="@+id/tv_deduction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deduction (%)"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp" />
+
+            <EditText
+                android:id="@+id/et_deduction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Deduction %"
+                android:inputType="numberDecimal"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Remarks -->
+            <TextView
+                android:id="@+id/tv_remarks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remarks"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp" />
+
+            <EditText
+                android:id="@+id/et_remarks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Remarks"
+                android:inputType="textMultiLine"
+                android:minLines="3"
+                android:gravity="top"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Tested By -->
+            <TextView
+                android:id="@+id/tv_tested_by"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tested By"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp" />
+
+            <EditText
+                android:id="@+id/et_tested_by"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Name"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Save Button -->
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/button_save"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Save"

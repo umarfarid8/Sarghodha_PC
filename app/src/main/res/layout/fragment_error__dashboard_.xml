@@ -33,7 +33,7 @@
             android:layout_marginTop="19dp"
             android:layout_marginEnd="32dp"
             android:gravity="center_horizontal"
-            android:text="Jhaz"
+            android:text="Thanks for this comment ,Jhaz"
             android:textSize="34sp"
             android:textStyle="bold|italic"
             app:layout_constraintEnd_toEndOf="parent"
