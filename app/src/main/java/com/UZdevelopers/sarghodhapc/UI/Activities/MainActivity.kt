@@ -28,8 +28,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        if(user != null){
+            loadHomeFragment(user!!.role!!)  //loading Dashboard based on user role.
+        }
 
-         loadHomeFragment(user!!.role!!)  //loading Dashboard based on user role.
 
     }
     private fun loadHomeFragment(role: String) {
