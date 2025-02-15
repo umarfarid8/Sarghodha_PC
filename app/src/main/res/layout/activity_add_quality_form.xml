@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".UI.Activities.Add_Quality_form">
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -16,179 +18,113 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
 
+            <TextView
+                android:id="@+id/tv_quality_specs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quality Specs of Material"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="16dp" />
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <!-- Moisture -->
+            <TextView
+                android:id="@+id/tv_moisture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Moisture (%)"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp" />
+
+            <EditText
+                android:id="@+id/et_moisture"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:hint="Enter Moisture %"
+                android:inputType="numberDecimal"
+                android:layout_marginBottom="8dp" />
 
-                <TextView
-                    android:id="@+id/tv_quality_specs"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="Quality Specs of Material"
-                    android:textColor="@android:color/black"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintMarginTop="16dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+            <!-- Sand -->
+            <TextView
+                android:id="@+id/tv_sand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sand (%)"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp" />
 
-                <!-- Moisture -->
-                <TextView
-                    android:id="@+id/tv_moisture"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="16dp"
-                    android:text="Moisture (%)"
-                    android:textStyle="bold"
-                    app:layout_constraintMarginStart="16dp"
-                    app:layout_constraintMarginTop="16dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_quality_specs" />
+            <EditText
+                android:id="@+id/et_sand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Sand %"
+                android:inputType="numberDecimal"
+                android:layout_marginBottom="8dp" />
 
-                <EditText
-                    android:id="@+id/et_moisture"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:hint="Enter Moisture %"
-                    android:inputType="numberDecimal"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintMarginEnd="16dp"
-                    app:layout_constraintMarginStart="16dp"
-                    app:layout_constraintMarginTop="8dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_moisture" />
+            <!-- Fines -->
+            <TextView
+                android:id="@+id/tv_fines"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fines (%)"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp" />
 
-                <!-- Sand -->
-                <TextView
-                    android:id="@+id/tv_sand"
-                    android:layout_width="wrap_content"
-                    android:layout_height="19dp"
-                    android:layout_marginStart="8dp"
-                    android:text="Sand (%)"
-                    android:textStyle="bold"
-                    app:layout_constraintMarginStart="16dp"
-                    app:layout_constraintMarginTop="16dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/et_moisture" />
+            <EditText
+                android:id="@+id/et_fines"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Fines %"
+                android:inputType="numberDecimal"
+                android:layout_marginBottom="8dp" />
 
-                <EditText
-                    android:id="@+id/et_sand"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:hint="Enter Sand %"
-                    android:inputType="numberDecimal"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintMarginEnd="16dp"
-                    app:layout_constraintMarginStart="16dp"
-                    app:layout_constraintMarginTop="8dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_sand" />
+            <!-- Mud Pieces -->
+            <TextView
+                android:id="@+id/tv_mud_pieces"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mud Pieces (%)"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp" />
 
-                <!-- Fines -->
-                <TextView
-                    android:id="@+id/tv_fines"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:text="Fines (%)"
-                    android:textStyle="bold"
-                    app:layout_constraintMarginStart="16dp"
-                    app:layout_constraintMarginTop="16dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/et_sand" />
+            <EditText
+                android:id="@+id/et_mud_pieces"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Mud Pieces %"
+                android:inputType="numberDecimal"
+                android:layout_marginBottom="8dp" />
 
-                <EditText
-                    android:id="@+id/et_fines"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:hint="Enter Fines %"
-                    android:inputType="numberDecimal"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintMarginEnd="16dp"
-                    app:layout_constraintMarginStart="16dp"
-                    app:layout_constraintMarginTop="8dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_fines" />
+            <!-- Burrays -->
+            <TextView
+                android:id="@+id/tv_burrays"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Burrays (%)"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp" />
 
-                <!-- Mud Pieces -->
-                <TextView
-                    android:id="@+id/tv_mud_pieces"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:text="Mud Pieces (%)"
-                    android:textStyle="bold"
-                    app:layout_constraintMarginStart="16dp"
-                    app:layout_constraintMarginTop="16dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/et_fines" />
+            <EditText
+                android:id="@+id/et_burrays"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Burrays %"
+                android:inputType="numberDecimal"
+                android:layout_marginBottom="16dp" />
 
-                <EditText
-                    android:id="@+id/et_mud_pieces"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:hint="Enter Mud Pieces %"
-                    android:inputType="numberDecimal"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintMarginEnd="16dp"
-                    app:layout_constraintMarginStart="16dp"
-                    app:layout_constraintMarginTop="8dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_mud_pieces" />
-
-                <!-- Burrays -->
-                <TextView
-                    android:id="@+id/tv_burrays"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:text="Burrays (%)"
-                    android:textStyle="bold"
-                    app:layout_constraintMarginStart="16dp"
-                    app:layout_constraintMarginTop="16dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/et_mud_pieces" />
-
-                <EditText
-                    android:id="@+id/et_burrays"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:hint="Enter Burrays %"
-                    android:inputType="numberDecimal"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintMarginEnd="16dp"
-                    app:layout_constraintMarginStart="16dp"
-                    app:layout_constraintMarginTop="8dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_burrays" />
-
-                <Button
-                    android:id="@+id/button2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="90dp"
-                    android:layout_marginTop="24dp"
-                    android:layout_marginEnd="90dp"
-                    android:text="Save"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/et_burrays" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                android:layout_gravity="center_horizontal"
+                android:padding="8dp" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

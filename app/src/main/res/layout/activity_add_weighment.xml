@@ -7,7 +7,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -18,31 +17,18 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <Button
-                    android:id="@+id/button"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="110dp"
-                    android:layout_marginTop="25dp"
-                    android:layout_marginEnd="110dp"
-                    android:text="Save"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/et_tare_weight" />
+                android:layout_height="wrap_content">
 
                 <TextView
                     android:id="@+id/textView10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
                     android:text="Add New Entry"
                     android:textSize="20sp"
                     android:textStyle="bold"
@@ -54,167 +40,142 @@
                     android:id="@+id/tv_vendor_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="16dp"
                     android:text="Vendor Name"
                     android:textStyle="bold"
-                    app:layout_constraintMarginStart="16dp"
-                    app:layout_constraintMarginTop="16dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView10" />
+                    app:layout_constraintTop_toBottomOf="@id/textView10"
+                    android:layout_marginTop="16dp"/>
 
                 <EditText
                     android:id="@+id/et_vendor_name"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
                     android:hint="Enter Vendor Name"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintMarginEnd="16dp"
-                    app:layout_constraintMarginStart="16dp"
-                    app:layout_constraintMarginTop="8dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_vendor_name" />
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_vendor_name"
+                    android:layout_marginTop="8dp" />
 
                 <!-- Vendor Number -->
                 <TextView
                     android:id="@+id/tv_vendor_number"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
                     android:text="Vendor Number"
                     android:textStyle="bold"
-                    app:layout_constraintMarginStart="16dp"
-                    app:layout_constraintMarginTop="16dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/et_vendor_name" />
+                    app:layout_constraintTop_toBottomOf="@id/et_vendor_name"
+                    android:layout_marginTop="16dp"/>
 
                 <EditText
                     android:id="@+id/et_vendor_number"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
                     android:hint="Enter Vendor Number"
                     android:inputType="number"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintMarginEnd="16dp"
-                    app:layout_constraintMarginStart="16dp"
-                    app:layout_constraintMarginTop="8dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_vendor_number" />
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_vendor_number"
+                    android:layout_marginTop="8dp"/>
 
                 <!-- Entry Permit -->
                 <TextView
                     android:id="@+id/tv_entry_permit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
                     android:text="Entry Permit #"
                     android:textStyle="bold"
-                    app:layout_constraintMarginStart="16dp"
-                    app:layout_constraintMarginTop="16dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/et_vendor_number" />
+                    app:layout_constraintTop_toBottomOf="@id/et_vendor_number"
+                    android:layout_marginTop="16dp"/>
 
                 <EditText
                     android:id="@+id/et_entry_permit"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
                     android:hint="Enter Entry Permit #"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintMarginEnd="16dp"
-                    app:layout_constraintMarginStart="16dp"
-                    app:layout_constraintMarginTop="8dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_entry_permit" />
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_entry_permit"
+                    android:layout_marginTop="8dp"/>
 
                 <!-- Vehicle Number -->
                 <TextView
                     android:id="@+id/tv_vehicle_number"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
                     android:text="Vehicle Number"
                     android:textStyle="bold"
-                    app:layout_constraintMarginStart="16dp"
-                    app:layout_constraintMarginTop="16dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/et_entry_permit" />
+                    app:layout_constraintTop_toBottomOf="@id/et_entry_permit"
+                    android:layout_marginTop="16dp"/>
 
                 <EditText
                     android:id="@+id/et_vehicle_number"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
                     android:hint="Enter Vehicle Number"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintMarginEnd="16dp"
-                    app:layout_constraintMarginStart="16dp"
-                    app:layout_constraintMarginTop="8dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_vehicle_number" />
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_vehicle_number"
+                    android:layout_marginTop="8dp"/>
 
                 <!-- Gross Weight -->
                 <TextView
                     android:id="@+id/tv_gross_weight"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
                     android:text="Gross Weight"
                     android:textStyle="bold"
-                    app:layout_constraintMarginStart="16dp"
-                    app:layout_constraintMarginTop="16dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/et_vehicle_number" />
+                    app:layout_constraintTop_toBottomOf="@id/et_vehicle_number"
+                    android:layout_marginTop="16dp"/>
 
                 <EditText
                     android:id="@+id/et_gross_weight"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
                     android:hint="Enter Gross Weight"
                     android:inputType="numberDecimal"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintMarginEnd="16dp"
-                    app:layout_constraintMarginStart="16dp"
-                    app:layout_constraintMarginTop="8dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_gross_weight" />
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_gross_weight"
+                    android:layout_marginTop="8dp"/>
 
                 <!-- Tare Weight -->
                 <TextView
                     android:id="@+id/tv_tare_weight"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
                     android:text="Tare Weight"
                     android:textStyle="bold"
-                    app:layout_constraintMarginStart="16dp"
-                    app:layout_constraintMarginTop="16dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/et_gross_weight" />
+                    app:layout_constraintTop_toBottomOf="@id/et_gross_weight"
+                    android:layout_marginTop="16dp"/>
 
                 <EditText
                     android:id="@+id/et_tare_weight"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
                     android:hint="Enter Tare Weight"
                     android:inputType="numberDecimal"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintMarginEnd="16dp"
-                    app:layout_constraintMarginStart="16dp"
-                    app:layout_constraintMarginTop="8dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_tare_weight" />
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_tare_weight"
+                    android:layout_marginTop="8dp"/>
+
+                <!-- Save Button -->
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Save"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/et_tare_weight"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="16dp"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </ScrollView>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
