@@ -63,6 +63,7 @@ dependencies {
     implementation ("org.jetbrains.kotlin:kotlin-stdlib:2.1.0")
     implementation ("androidx.appcompat:appcompat:1.6.1")
     implementation ("androidx.fragment:fragment-ktx:1.6.2")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4") //
 
 
 

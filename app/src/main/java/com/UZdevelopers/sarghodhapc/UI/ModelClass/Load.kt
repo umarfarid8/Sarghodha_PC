@@ -2,11 +2,12 @@ package com.UZdevelopers.sarghodhapc.UI.ModelClass
 
 class Load(
     var id:String?=null,
+    var processStatus:String?="Waiting For Quality Check",
     var materialName:String?="-1",
     var date:String?="-1",
     var vendorName:String?="-1",
     var vendorNumber: String="-1",
-    var entryPermitted:String?="-1",
+    var entryPermit:String?="-1",
     var vechileType:String?="-1",
     var vechileNumber:String?="-1",
     var grossWeight:String?="-1",
