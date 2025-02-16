@@ -66,6 +66,8 @@ dependencies {
     implementation ("androidx.fragment:fragment-ktx:1.6.2")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4") //
 
+    implementation("com.google.code.gson:gson:2.11.0")
+
 
 
 }
