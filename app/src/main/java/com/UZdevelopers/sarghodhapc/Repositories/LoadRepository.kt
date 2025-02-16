@@ -47,9 +47,13 @@ class LoadRepository {
 //    orderCollection.whereEqualTo("status", "Completed").snapshots().map { it.toObjects(Load::class.java) }
 
 
-    fun getOrdersOfUserCompleted(phoneNumber: String) =
-        orderCollection.whereEqualTo("phoneNumber",phoneNumber).whereEqualTo("status", "Completed").snapshots().map { it.toObjects(
-            Load::class.java) }
+    fun getEPRecord(epNumber: String) =
+        orderCollection.whereEqualTo("entryPermit",epNumber).snapshots().map {
+            it.toObjects(Load::class.java)
+        }
+//    fun getOrdersOfUserCompleted(phoneNumber: String) =
+//        orderCollection.whereEqualTo("phoneNumber",phoneNumber).whereEqualTo("status", "Completed").snapshots().map { it.toObjects(
+//            Load::class.java) }
 
 
     suspend fun getMostRecentOrderOfUser(phoneNumber: String): Result<Load?>{
