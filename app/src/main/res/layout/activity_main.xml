@@ -36,7 +36,7 @@
                     <ImageView
                         android:id="@+id/drawer_icon"
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:padding="12dp"
                         android:src="@drawable/baseline_menu_24"
                         app:tint="@color/white" />
@@ -64,6 +64,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:defaultNavHost="true"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/appbarLayout"
             app:navGraph="@navigation/nav_graph" />
 
