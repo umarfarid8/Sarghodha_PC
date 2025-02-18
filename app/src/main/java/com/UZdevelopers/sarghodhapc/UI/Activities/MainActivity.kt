@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         if(user != null){
+            Toast.makeText(this, "Welcome ${user!!.role}", Toast.LENGTH_SHORT).show()
             loadHomeFragment(user!!.role!!)  //loading Dashboard based on user role.
         }
 

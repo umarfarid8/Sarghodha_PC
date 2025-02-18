@@ -3,6 +3,7 @@ package com.UZdevelopers.sarghodhapc.UI.Activities
 import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
@@ -21,6 +22,7 @@ class Search_Quailty_Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         viewModel = QualitySearchModelClass()
 
+
         progressDialog = ProgressDialog(this)
         progressDialog.setMessage("Matching EP Number...")
         progressDialog.setCancelable(false)
@@ -31,7 +33,8 @@ class Search_Quailty_Activity : AppCompatActivity() {
 
             if (searchText.isNotEmpty()) {
                 progressDialog.show()
-                viewModel.searchRecord(searchText)
+                viewModel.searchEP(searchText)
+
             } else {
                 Toast.makeText(this, "Please enter a search text", Toast.LENGTH_SHORT).show()
                 binding.etSearch.error = "Please enter a search EP Number"
@@ -58,6 +61,7 @@ class Search_Quailty_Activity : AppCompatActivity() {
                 }
             }
 
+
             lifecycleScope.launch {
                 viewModel.dataEmpty.collect {
                     if (it) {
@@ -70,6 +74,8 @@ class Search_Quailty_Activity : AppCompatActivity() {
                     }
                 }
             }
+
+
         }
     }
 }
