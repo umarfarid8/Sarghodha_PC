@@ -2,9 +2,13 @@ package com.UZdevelopers.sarghodhapc.UI.Activities
 
 import android.os.Bundle
 import android.util.Log
+import android.view.View
+import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.GravityCompat
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import com.UZdevelopers.sarghodhapc.Repositories.AuthRepository
 import com.UZdevelopers.sarghodhapc.UI.ModelClass.Users
@@ -19,6 +23,7 @@ import com.UZdevelopers.sarghodhapc.UI.Fragments.Weightment_Dashboard_Fragment
 import com.UZdevelopers.sarghodhapc.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
     companion object {
         var user: Users? = null
     }
@@ -28,6 +33,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        val drawer = findViewById<DrawerLayout>(R.id.drawer_layout)
+        val imageView = findViewById<ImageView>(R.id.drawer_icon)
+        imageView.setOnClickListener { view: View? ->
+            if (drawer.isDrawerVisible(GravityCompat.START)) {
+                drawer.closeDrawer(GravityCompat.START)
+            } else {
+                drawer.openDrawer(GravityCompat.START)
+            }
+        }
         if(user != null){
             Toast.makeText(this, "Welcome ${user!!.role}", Toast.LENGTH_SHORT).show()
             loadHomeFragment(user!!.role!!)  //loading Dashboard based on user role.
