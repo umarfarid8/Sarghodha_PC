@@ -3,22 +3,21 @@ package com.UZdevelopers.sarghodhapc.UI.Activities
 import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.UZdevelopers.sarghodhapc.ViewModels.QualitySearchModelClass
-import com.UZdevelopers.sarghodhapc.databinding.ActivitySearchQuailtyBinding
+import com.UZdevelopers.sarghodhapc.databinding.ActivitySearchUnloadingBinding
 import com.google.gson.Gson
 import kotlinx.coroutines.launch
 
-class Search_Quailty_Activity : AppCompatActivity() {
-    lateinit var binding: ActivitySearchQuailtyBinding
+class Search_Unloading_Activity : AppCompatActivity() {
+    lateinit var binding: ActivitySearchUnloadingBinding
     lateinit var viewModel: QualitySearchModelClass
     lateinit var progressDialog: ProgressDialog
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        binding = ActivitySearchQuailtyBinding.inflate(layoutInflater)
+        binding = ActivitySearchUnloadingBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         viewModel = QualitySearchModelClass()
 
@@ -44,7 +43,7 @@ class Search_Quailty_Activity : AppCompatActivity() {
             lifecycleScope.launch {
                 viewModel.failureMessage.collect {
                     if (it != null) {
-                        Toast.makeText(this@Search_Quailty_Activity, it, Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@Search_Unloading_Activity, it, Toast.LENGTH_SHORT).show()
                     }
                 }
             }
@@ -53,11 +52,11 @@ class Search_Quailty_Activity : AppCompatActivity() {
                 viewModel.loadData.collect {
                     if (it != null) {
                         progressDialog.dismiss()
-                        if(it.processStatus != "Waiting For Quality Check"){
-                            Toast.makeText(this@Search_Quailty_Activity, "This EP Number is already checked", Toast.LENGTH_SHORT).show()
+                        if(it.processStatus != "Waiting For Unloading"){
+                            Toast.makeText(this@Search_Unloading_Activity, "This EP Number is already checked", Toast.LENGTH_SHORT).show()
                         } else {
                             val intent =
-                                Intent(this@Search_Quailty_Activity, Add_Quality_form::class.java)
+                                Intent(this@Search_Unloading_Activity, Add_Unloading_Form::class.java)
                             intent.putExtra("data", Gson().toJson(it))
                             startActivity(intent)
                         }
@@ -71,7 +70,7 @@ class Search_Quailty_Activity : AppCompatActivity() {
                     if (it) {
                         progressDialog.dismiss()
                         Toast.makeText(
-                            this@Search_Quailty_Activity,
+                            this@Search_Unloading_Activity,
                             "No Data Found",
                             Toast.LENGTH_SHORT
                         ).show()

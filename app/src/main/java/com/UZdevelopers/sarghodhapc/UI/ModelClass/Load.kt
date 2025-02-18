@@ -22,6 +22,7 @@ class Load(
     var burraysP:String?="-1",
     var finesP:String?="-1",
     var colorr:String?="--", // light, dark Brown
+    var testedBy:String?="--",
     var status:String?="--",
     var remarks:String?="--",
 
