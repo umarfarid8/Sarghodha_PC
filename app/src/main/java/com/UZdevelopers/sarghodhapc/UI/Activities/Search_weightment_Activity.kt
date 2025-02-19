@@ -63,7 +63,7 @@ class Search_weightment_Activity : AppCompatActivity() {
                             Toast.makeText(this@Search_weightment_Activity, "This EP Number is already checked", Toast.LENGTH_SHORT).show()
                         } else {
                             val intent =
-                                Intent(this@Search_weightment_Activity, Add_Unloading_Form::class.java)
+                                Intent(this@Search_weightment_Activity, TareData_Weightment_Activity::class.java)
                             intent.putExtra("data", Gson().toJson(it))
                             startActivity(intent)
                         }

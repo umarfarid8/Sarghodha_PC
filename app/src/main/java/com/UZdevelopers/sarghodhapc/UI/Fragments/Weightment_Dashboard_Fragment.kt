@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.UZdevelopers.sarghodhapc.R
+import com.UZdevelopers.sarghodhapc.UI.Activities.Search_weightment_Activity
 import com.UZdevelopers.sarghodhapc.UI.Activities.SelectMaterial
 import com.UZdevelopers.sarghodhapc.databinding.ActivityMainBinding
 import com.UZdevelopers.sarghodhapc.databinding.FragmentWeightmentDashboardBinding
@@ -27,6 +28,10 @@ class Weightment_Dashboard_Fragment : Fragment() {
 
         binding.cardView.setOnClickListener(){
             startActivity(Intent(this@Weightment_Dashboard_Fragment.requireContext(), SelectMaterial::class.java))
+        }
+
+        binding.cardView2.setOnClickListener(){
+           startActivity(Intent(this@Weightment_Dashboard_Fragment.requireContext(), Search_weightment_Activity::class.java))
         }
 
     }

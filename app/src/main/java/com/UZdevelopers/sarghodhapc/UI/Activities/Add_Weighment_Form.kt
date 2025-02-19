@@ -98,7 +98,6 @@ class Add_Weighment_Form : AppCompatActivity() {
         val grossWeight = etGrossWeight.text.toString().trim()
 //        val tareWeight = etTareWeight.text.toString().trim()
 
-          Log.i("Form", vendorName)
         if (vendorName.isEmpty()) {
             etVendorName.error = "Vendor Name is required"
             showToast("Vendor Name is required")
