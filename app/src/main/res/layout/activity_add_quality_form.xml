@@ -195,7 +195,8 @@
                 android:layout_height="wrap_content"
                 android:text="Color"
                 android:textStyle="bold"
-                android:layout_marginTop="8dp" />
+                android:layout_marginTop="8dp"
+                />
 
             <RadioGroup
                 android:id="@+id/rg_color"
@@ -231,7 +232,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginBottom="8dp">
+                android:layout_marginBottom="8dp"
+                android:enabled="false">
 
                 <RadioButton
                     android:id="@+id/rb_accepted"
@@ -248,7 +250,7 @@
                     android:id="@+id/rb_hold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Hold" />
+                    android:text="Rejected" />
             </RadioGroup>
 
             <!-- Deduction -->
