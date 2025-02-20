@@ -44,6 +44,7 @@
                 android:layout_marginBottom="16dp"
                 android:padding="8dp"
                 android:text="Search"
+                android:backgroundTint="#176AB5"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"

@@ -8,148 +8,213 @@
     tools:context=".UI.Activities.Add_Assumption_HoldActivity"
     android:padding="16dp">
 
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent">
-
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
-        <!-- Material Dropdown -->
-        <TextView
-            android:id="@+id/textView9"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Selected Material"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/epNumber1" />
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/selectedMaterial2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Wheat Straw Loose Biomass"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/textView6"
-            app:layout_constraintStart_toEndOf="@+id/textView6"
-            app:layout_constraintTop_toTopOf="@+id/textView6" />
+            <!-- Material Dropdown -->
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Selected Material"
 
-        <!-- Moisture Assumption -->
-        <EditText
-            android:id="@+id/et_moistureAssumptionL"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:hint="Moisture Assumption"
-            android:inputType="numberDecimal"
-            android:layout_marginBottom="8dp" />
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
-        <!-- Moisture Hold -->
-        <EditText
-            android:id="@+id/et_moistureHoldL"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Moisture Hold"
-            android:inputType="numberDecimal"
-            android:layout_marginBottom="8dp" />
+            <TextView
+                android:id="@+id/selectedMaterial2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Wheat Straw Loose Biomass"
+                android:textSize="16sp" />
 
-        <!-- Sand Assumption -->
-        <EditText
-            android:id="@+id/et_sandAssumptionL"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Sand Assumption"
-            android:inputType="numberDecimal"
-            android:layout_marginBottom="8dp" />
+            <!-- Moisture Assumption -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Moisture Assumption"
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
-        <!-- Sand Hold -->
-        <EditText
-            android:id="@+id/et_sandHoldL"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Sand Hold"
-            android:inputType="numberDecimal"
-            android:layout_marginBottom="8dp" />
+            <EditText
+                android:id="@+id/et_moistureAssumptionL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Moisture Assumption"
+                android:inputType="numberDecimal"
+                android:layout_marginBottom="8dp" />
 
-        <!-- Mud Piece Assumption -->
-        <EditText
-            android:id="@+id/et_mudPieceAssumptionL"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Mud Piece Assumption"
-            android:inputType="numberDecimal"
-            android:layout_marginBottom="8dp" />
+            <!-- Moisture Hold -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Moisture Hold"
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
-        <!-- Mud Piece Hold -->
-        <EditText
-            android:id="@+id/et_mudPieceHoldL"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Mud Piece Hold"
-            android:inputType="numberDecimal"
-            android:layout_marginBottom="8dp" />
+            <EditText
+                android:id="@+id/et_moistureHoldL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Moisture Hold"
+                android:inputType="numberDecimal"
+                android:layout_marginBottom="8dp" />
 
-        <!-- Burrays Assumption -->
-        <EditText
-            android:id="@+id/et_burraysAssumptionL"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Burrays Assumption"
-            android:inputType="numberDecimal"
-            android:layout_marginBottom="8dp" />
+            <!-- Sand Assumption -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sand Assumption"
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
-        <!-- Burrays Hold -->
-        <EditText
-            android:id="@+id/et_burraysHoldL"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Burrays Hold"
-            android:inputType="numberDecimal"
-            android:layout_marginBottom="8dp" />
+            <EditText
+                android:id="@+id/et_sandAssumptionL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Sand Assumption"
+                android:inputType="numberDecimal"
+                android:layout_marginBottom="8dp" />
 
-        <!-- Fines Assumption -->
-        <EditText
-            android:id="@+id/et_finesAssumptionL"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Fines Assumption"
-            android:inputType="numberDecimal"
-            android:layout_marginBottom="8dp" />
+            <!-- Sand Hold -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sand Hold"
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
-        <!-- Fines Hold -->
-        <EditText
-            android:id="@+id/et_finesHoldL"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Fines Hold"
-            android:inputType="numberDecimal"
-            android:layout_marginBottom="16dp" />
+            <EditText
+                android:id="@+id/et_sandHoldL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Sand Hold"
+                android:inputType="numberDecimal"
+                android:layout_marginBottom="8dp" />
 
-        <!-- Save Button -->
-        <Button
-            android:id="@+id/button_save"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Save"
-            android:layout_gravity="center_horizontal" />
+            <!-- Mud Piece Assumption -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mud Piece Assumption"
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/buttonupdate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:text="Update" />
+            <EditText
+                android:id="@+id/et_mudPieceAssumptionL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Mud Piece Assumption"
+                android:inputType="numberDecimal"
+                android:layout_marginBottom="8dp" />
 
-    </LinearLayout>
-</ScrollView>
+            <!-- Mud Piece Hold -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mud Piece Hold"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/et_mudPieceHoldL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Mud Piece Hold"
+                android:inputType="numberDecimal"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Burrays Assumption -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Burrays Assumption"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/et_burraysAssumptionL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Burrays Assumption"
+                android:inputType="numberDecimal"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Burrays Hold -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Burrays Hold"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/et_burraysHoldL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Burrays Hold"
+                android:inputType="numberDecimal"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Fines Assumption -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fines Assumption"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/et_finesAssumptionL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Fines Assumption"
+                android:inputType="numberDecimal"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Fines Hold -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fines Hold"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/et_finesHoldL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Fines Hold"
+                android:inputType="numberDecimal"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Save Button -->
+            <Button
+                android:id="@+id/button_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                android:layout_gravity="center_horizontal" />
+
+            <Button
+                android:id="@+id/buttonupdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Update" />
+
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
