@@ -39,7 +39,7 @@ class MaterialRespository {
         materialCollection.snapshots().map { it.toObjects(Material::class.java)
     }
 
-    fun getMaterail(matName: String) =
+    fun getMaterial(matName: String) =
         materialCollection.whereEqualTo("material",matName).snapshots().map {
             it.toObjects(Material::class.java)
         }

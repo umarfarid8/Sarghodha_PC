@@ -22,7 +22,7 @@ class AddQualityDataViewModel:ViewModel() {
 
     fun getMaterial(mtname: String){
         viewModelScope.launch {
-            materialRespositry.getMaterail(mtname).catch {
+            materialRespositry.getMaterial(mtname).catch {
                 failureLoadingMaterial.value = it.message
             }
                 .collect{

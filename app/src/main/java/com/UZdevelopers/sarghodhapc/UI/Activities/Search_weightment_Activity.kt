@@ -59,7 +59,7 @@ class Search_weightment_Activity : AppCompatActivity() {
                 viewModel.loadData.collect {
                     if (it != null) {
                         progressDialog.dismiss()
-                        if(it.processStatus != "Waiting For Tare Weight"){
+                        if(it.processStatus!!.toInt() > 3){
                             Toast.makeText(this@Search_weightment_Activity, "This EP Number is already checked", Toast.LENGTH_SHORT).show()
                         } else {
                             val intent =
