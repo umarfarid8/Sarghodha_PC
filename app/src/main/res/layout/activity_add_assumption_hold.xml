@@ -205,6 +205,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Save"
+                android:backgroundTint="#176AB5"
                 android:layout_gravity="center_horizontal" />
 
             <Button
@@ -212,6 +213,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
+                android:backgroundTint="#176AB5"
                 android:text="Update" />
 
         </LinearLayout>
