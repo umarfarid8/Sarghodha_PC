@@ -2,8 +2,9 @@ package com.UZdevelopers.sarghodhapc.UI.ModelClass
 
 class Load(
     var id:String?=null,
-    var processStatus:String?="Waiting For Quality Check",
-    var materialName:String?="-1",
+    var processStatus:String?="1", // 1 Initial Weighment
+//2 when quality check is done  3 when unloading is done 4 tear weight is added (cycle completed)
+       var materialName:String?="-1",
     var date:String?="-1",
     var vendorName:String?="-1",
     var vendorNumber: String="-1",

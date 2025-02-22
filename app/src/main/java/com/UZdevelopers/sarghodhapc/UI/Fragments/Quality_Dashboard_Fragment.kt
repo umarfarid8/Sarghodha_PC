@@ -8,8 +8,11 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.UZdevelopers.sarghodhapc.R
 import com.UZdevelopers.sarghodhapc.UI.Activities.Add_Quality_form
+import com.UZdevelopers.sarghodhapc.UI.Activities.History_quality_Activity
 import com.UZdevelopers.sarghodhapc.UI.Activities.Search_Quailty_Activity
 import com.UZdevelopers.sarghodhapc.UI.Activities.SelectMaterial
+import com.UZdevelopers.sarghodhapc.UI.Adapters.HistoryQualityAdapter
+import com.UZdevelopers.sarghodhapc.databinding.ActivityHistoryQualityBinding
 import com.UZdevelopers.sarghodhapc.databinding.FragmentQualityDashboardBinding
 import com.UZdevelopers.sarghodhapc.databinding.FragmentWeightmentDashboardBinding
 
@@ -33,6 +36,12 @@ class Quality_Dashboard_Fragment : Fragment() {
                     Search_Quailty_Activity::class.java
                 )
             )
+        }
+
+        binding.cardViewInspectionHistory.setOnClickListener() {
+            startActivity(
+                Intent(
+                    this@Quality_Dashboard_Fragment.requireContext(), History_quality_Activity::class.java))
         }
 
     }

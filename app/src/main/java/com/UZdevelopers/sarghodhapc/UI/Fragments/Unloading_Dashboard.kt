@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.UZdevelopers.sarghodhapc.R
 import com.UZdevelopers.sarghodhapc.UI.Activities.Add_Unloading_Form
+import com.UZdevelopers.sarghodhapc.UI.Activities.HistoryUnloadingActivity
 import com.UZdevelopers.sarghodhapc.UI.Activities.Search_Quailty_Activity
 import com.UZdevelopers.sarghodhapc.UI.Activities.Search_Unloading_Activity
 import com.UZdevelopers.sarghodhapc.databinding.FragmentQualityDashboardBinding
@@ -31,6 +32,14 @@ class Unloading_Dashboard : Fragment() {
                 Intent(
                     this@Unloading_Dashboard.requireContext(),
                    Search_Unloading_Activity::class.java
+                )
+            )
+        }
+        binding.cardViewHistory.setOnClickListener() {
+            startActivity(
+                Intent(
+                    this@Unloading_Dashboard.requireContext(),
+                    HistoryUnloadingActivity::class.java
                 )
             )
         }

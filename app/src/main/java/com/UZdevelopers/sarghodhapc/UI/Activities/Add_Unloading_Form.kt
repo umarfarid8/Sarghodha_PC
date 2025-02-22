@@ -51,7 +51,7 @@ class Add_Unloading_Form : AppCompatActivity() {
                 return@setOnClickListener
             }
             progressDialog.show()
-            LoadData.processStatus = "Waiting For Tare Weight"
+            LoadData.processStatus = (LoadData.processStatus!!.toInt() + 1).toString()
             LoadData.stackNumber = binding.etStackNumber.text.toString()
             viewModel.updateLoad(LoadData)
         }

@@ -52,7 +52,7 @@ class Search_Unloading_Activity : AppCompatActivity() {
                 viewModel.loadData.collect {
                     if (it != null) {
                         progressDialog.dismiss()
-                        if(it.processStatus != "Waiting For Unloading"){
+                        if(it.processStatus!!.toInt() > 2){
                             Toast.makeText(this@Search_Unloading_Activity, "This EP Number is already checked", Toast.LENGTH_SHORT).show()
                         } else {
                             val intent =

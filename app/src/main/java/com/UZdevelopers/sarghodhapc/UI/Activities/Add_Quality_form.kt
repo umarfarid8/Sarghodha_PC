@@ -236,7 +236,7 @@ class Add_Quality_form : AppCompatActivity() {
                  status = "Rejected"
                 }
                 LoadData.status = status
-                LoadData.processStatus = "Waiting For Unloading"
+                LoadData.processStatus = (LoadData.processStatus!!.toInt() + 1).toString()
                 LoadData.remarks = binding.etRemarks.text.toString()
                 LoadData.deductionP = binding.etDeduction.text.toString()
                 LoadData.testedBy = binding.etTestedBy.text.toString()

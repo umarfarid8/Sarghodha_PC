@@ -42,7 +42,7 @@ class LimitViewModel:ViewModel() {
     }
     fun getMaterial(mtname: String){
         viewModelScope.launch {
-            materialRespositry.getMaterail(mtname).catch {
+            materialRespositry.getMaterial(mtname).catch {
                 failureMessage.value = it.message
             }
                 .collect{

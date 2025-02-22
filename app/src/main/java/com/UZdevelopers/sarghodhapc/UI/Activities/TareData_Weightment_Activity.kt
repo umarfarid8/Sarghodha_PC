@@ -24,6 +24,7 @@ class TareData_Weightment_Activity : AppCompatActivity() {
     lateinit var  binding: ActivityTareDataWeightmentBinding
     lateinit var  viewModel: TareWeightViewModel
     lateinit var progressDialog: ProgressDialog
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         progressDialog = ProgressDialog(this)
@@ -44,6 +45,7 @@ class TareData_Weightment_Activity : AppCompatActivity() {
             }
 
             progressDialog.show()
+            LoadData.processStatus = (LoadData.processStatus!!.toInt() + 1).toString()
             viewModel.updateLoad(LoadData)
         }
 
