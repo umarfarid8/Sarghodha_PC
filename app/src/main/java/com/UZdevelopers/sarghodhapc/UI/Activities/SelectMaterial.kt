@@ -1,12 +1,8 @@
 package com.UZdevelopers.sarghodhapc.UI.Activities
 
-import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.UZdevelopers.sarghodhapc.UI.Activities.MainActivity.Companion.user
 import com.UZdevelopers.sarghodhapc.databinding.ActivitySelectMaterialBinding
 
 class SelectMaterial : AppCompatActivity() {
@@ -21,7 +17,7 @@ class SelectMaterial : AppCompatActivity() {
 
         val role = intent.getStringExtra("user")
         if (role == "Centre In-Charge" ){
-                activity = Add_Assumption_HoldActivity::class.java
+                activity = Add_Exemption_HoldActivity::class.java
             }
 
         binding.material1.setOnClickListener{

@@ -34,7 +34,7 @@
             android:name=".UI.Activities.Add_Unloading_Form"
             android:exported="false" />
         <activity
-            android:name=".UI.Activities.Add_Assumption_HoldActivity"
+            android:name=".UI.Activities.Add_Exemption_HoldActivity"
             android:exported="false" />
         <activity
             android:name=".UI.Activities.Search_Quailty_Activity"
@@ -51,9 +51,7 @@
         <activity
             android:name=".UI.Activities.SelectMaterial"
             android:exported="false" />
-        <activity
-            android:name=".UI.Fragments.FragmentWeightmentAssistant"
-            android:exported="false" />
+
         <activity
             android:name=".UI.Activities.ResetPasswordActivity"
             android:exported="false" />

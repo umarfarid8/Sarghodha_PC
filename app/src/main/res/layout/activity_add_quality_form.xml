@@ -33,6 +33,8 @@
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
+            <!-- Moisture -->
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
@@ -52,7 +54,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="Selected Material"
+                    android:text="Selected Material:"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
@@ -92,6 +94,46 @@
                     app:layout_constraintTop_toTopOf="@+id/textView8" />
 
                 <TextView
+                    android:id="@+id/vendorNOValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/gorssweight"
+                    app:layout_constraintStart_toStartOf="@+id/gorssweight"
+                    app:layout_constraintTop_toTopOf="@+id/textView32" />
+
+                <TextView
+                    android:id="@+id/vendorNameValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/gorssweight"
+                    app:layout_constraintStart_toStartOf="@+id/gorssweight"
+                    app:layout_constraintTop_toTopOf="@+id/textView33" />
+
+                <TextView
+                    android:id="@+id/vehiccletypeValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/gorssweight"
+                    app:layout_constraintStart_toStartOf="@+id/gorssweight"
+                    app:layout_constraintTop_toTopOf="@+id/textView31" />
+
+                <TextView
+                    android:id="@+id/vehicleNOValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/gorssweight"
+                    app:layout_constraintStart_toStartOf="@+id/gorssweight"
+                    app:layout_constraintTop_toTopOf="@+id/textView27" />
+
+                <TextView
                     android:id="@+id/epNumber"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -101,9 +143,52 @@
                     app:layout_constraintBottom_toBottomOf="@+id/epNumber1"
                     app:layout_constraintStart_toEndOf="@+id/epNumber1"
                     app:layout_constraintTop_toTopOf="@+id/epNumber1" />
+
+                <TextView
+                    android:id="@+id/textView27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Vehicle No:"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+                <TextView
+                    android:id="@+id/textView31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Vehicle Type:"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
+                <TextView
+                    android:id="@+id/textView32"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Vendor No:"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView33" />
+
+                <TextView
+                    android:id="@+id/textView33"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Vendor Name:"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView31" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <!-- Moisture -->
             <TextView
                 android:id="@+id/tv_moisture"
                 android:layout_width="wrap_content"
