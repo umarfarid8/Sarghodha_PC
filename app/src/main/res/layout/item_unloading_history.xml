@@ -166,14 +166,14 @@
                     android:id="@+id/namee2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="#CBD1D7"
+                    android:background="#176AB5"
                     android:fontFamily="@font/poppins"
                     android:paddingStart="10dp"
                     android:paddingTop="5dp"
                     android:paddingEnd="10dp"
                     android:paddingBottom="5dp"
                     android:text="Completed"
-                    android:textColor="#1F1F1F"
+                    android:textColor="@color/white"
                     android:textSize="16sp" />
             </androidx.cardview.widget.CardView>
 

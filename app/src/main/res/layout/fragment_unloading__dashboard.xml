@@ -162,10 +162,12 @@
 
                     <ImageView
                         android:id="@+id/imageViewGenerateReport"
-                        android:layout_width="120dp"
-                        android:layout_height="120dp"
+                        android:layout_width="105dp"
+                        android:layout_height="82dp"
+                        android:layout_marginTop="16dp"
                         android:src="@drawable/generate_report"
                         app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.511"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 

@@ -22,6 +22,7 @@
             android:orientation="vertical"
             android:padding="16dp">
 
+            <!-- Entry Permit -->
             <TextView
                 android:id="@+id/tv_details"
                 android:layout_width="wrap_content"
@@ -29,9 +30,10 @@
                 android:text="Details"
                 android:textColor="#176AB5"
                 android:textSize="20sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                />
 
-            <!-- Entry Permit -->
             <TextView
                 android:id="@+id/tv_entry_permit"
                 android:layout_width="wrap_content"
