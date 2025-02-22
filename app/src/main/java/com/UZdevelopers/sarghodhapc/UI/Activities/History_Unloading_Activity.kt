@@ -49,7 +49,7 @@ class HistoryUnloadingActivity : AppCompatActivity() {
                 dataList?.let {
                     loadList.clear()
                     it.filterTo(loadList) { item ->
-                        item.processStatus!!.toInt() > 3
+                        item.processStatus!!.toInt() >= 3
                     }
                     adapter.notifyDataSetChanged()
                 }

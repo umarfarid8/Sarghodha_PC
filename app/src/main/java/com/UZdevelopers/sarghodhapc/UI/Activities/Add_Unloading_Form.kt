@@ -36,13 +36,18 @@ class Add_Unloading_Form : AppCompatActivity() {
         progressDialog.setCancelable(false)
 
         val LoadData = Gson().fromJson(intent.getStringExtra("data"), Load::class.java)
-        binding.etEntryPermit.isEnabled = false
 
-        binding.etEntryPermit.setText(LoadData.entryPermit)
+
+        binding.epNumber.text = LoadData.entryPermit
         binding.tvDeductionValue.text = LoadData.deductionP.toString()
         binding.tvSandValue.text = LoadData.sandP.toString()
         binding.tvMoistureValue.text = LoadData.mositureP.toString()
-        binding.tvGrossWeightValue.text = LoadData.grossWeight.toString()
+        binding.gorssweight.text = LoadData.grossWeight.toString()
+        binding.vendorNameValue.text = LoadData.vendorName
+        binding.vendorNOValue.text = LoadData.vendorNumber
+        binding.vehiccletypeValue.text = LoadData.vechileType
+        binding.vehicleNOValue.text = LoadData.vechileNumber
+        binding.tvMudPieces.text = LoadData.mudPieceP
 
         binding.btnSubmit.setOnClickListener{
 

@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UI.Activities.Add_Assumption_HoldActivity"
+    tools:context=".UI.Activities.Add_Exemption_HoldActivity"
     android:padding="16dp">
 
     <ScrollView
@@ -43,7 +43,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Moisture Assumption"
+                android:text="Moisture Exemption"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -51,9 +51,9 @@
                 android:id="@+id/et_moistureAssumptionL"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter Moisture Assumption"
-                android:inputType="numberDecimal"
-                android:layout_marginBottom="8dp" />
+                android:layout_marginBottom="8dp"
+                android:hint="Enter Moisture Exemption"
+                android:inputType="numberDecimal" />
 
             <!-- Moisture Hold -->
             <TextView
@@ -75,7 +75,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Sand Assumption"
+                android:text="Sand Exemption"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -83,9 +83,9 @@
                 android:id="@+id/et_sandAssumptionL"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter Sand Assumption"
-                android:inputType="numberDecimal"
-                android:layout_marginBottom="8dp" />
+                android:layout_marginBottom="8dp"
+                android:hint="Enter Sand Exemption"
+                android:inputType="numberDecimal" />
 
             <!-- Sand Hold -->
             <TextView
@@ -107,7 +107,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Mud Piece Assumption"
+                android:text="Mud Piece Exemption"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -115,9 +115,9 @@
                 android:id="@+id/et_mudPieceAssumptionL"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter Mud Piece Assumption"
-                android:inputType="numberDecimal"
-                android:layout_marginBottom="8dp" />
+                android:layout_marginBottom="8dp"
+                android:hint="Enter Mud Piece Exemption"
+                android:inputType="numberDecimal" />
 
             <!-- Mud Piece Hold -->
             <TextView
@@ -147,9 +147,9 @@
                 android:id="@+id/et_burraysAssumptionL"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter Burrays Assumption"
-                android:inputType="numberDecimal"
-                android:layout_marginBottom="8dp" />
+                android:layout_marginBottom="8dp"
+                android:hint="Enter Burrays Exemption"
+                android:inputType="numberDecimal" />
 
             <!-- Burrays Hold -->
             <TextView
@@ -171,7 +171,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Fines Assumption"
+                android:text="Fines Exemption"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -179,9 +179,9 @@
                 android:id="@+id/et_finesAssumptionL"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter Fines Assumption"
-                android:inputType="numberDecimal"
-                android:layout_marginBottom="8dp" />
+                android:layout_marginBottom="8dp"
+                android:hint="Enter Fines Exemption"
+                android:inputType="numberDecimal" />
 
             <!-- Fines Hold -->
             <TextView

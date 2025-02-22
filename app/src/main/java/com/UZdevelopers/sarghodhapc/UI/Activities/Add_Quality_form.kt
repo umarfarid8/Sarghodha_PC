@@ -9,18 +9,13 @@ import android.util.Log
 import android.view.View
 import android.widget.EditText
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.lifecycleScope
-import com.UZdevelopers.sarghodhapc.R
 import com.UZdevelopers.sarghodhapc.UI.ModelClass.Load
 import com.UZdevelopers.sarghodhapc.UI.ModelClass.Material
 import com.UZdevelopers.sarghodhapc.ViewModels.AddQualityDataViewModel
 import com.UZdevelopers.sarghodhapc.databinding.ActivityAddQualityFormBinding
 import com.google.gson.Gson
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
 class Add_Quality_form : AppCompatActivity() {
@@ -48,6 +43,10 @@ class Add_Quality_form : AppCompatActivity() {
         binding.epNumber.text = LoadData.entryPermit
         binding.selectedMaterial.text = LoadData.materialName
         binding.gorssweight.text = LoadData.grossWeight.toString() + " Tones"
+        binding.vendorNameValue.text = LoadData.vendorName
+        binding.vendorNOValue.text = LoadData.vendorNumber
+        binding.vehiccletypeValue.text = LoadData.vechileType
+        binding.vehicleNOValue.text = LoadData.vechileNumber
         binding.etDeduction.isEnabled = false
 
         val etMoisture = binding.etMoisture
@@ -105,7 +104,7 @@ class Add_Quality_form : AppCompatActivity() {
                 override fun afterTextChanged(s: Editable?) {
                     if(validateRelatedFields()){
                         var totalDeduction = 0.0
-                        if(material.finesAssumptionL != null && material.burraysAssumptionL != null){ // checking if we need to check this field or not
+                        if(material.finesExemption != null && material.burraysExemption != null){ // checking if we need to check this field or not
                            if( etFines.text.toString().toFloat() > material.finesHoldL!! ||
                                etBurrays.text.toString().toFloat() > material.burraysHoldL!! ||
                                etMoisture.text.toString().toFloat() > material.moistureHoldL!! ||
@@ -117,11 +116,11 @@ class Add_Quality_form : AppCompatActivity() {
                                 binding.rbHold.isChecked = true
 
                            } else {
-                               var moistureV = (binding.etMoisture.text.toString().toFloat()) - material.moistureAssumptionL!!
-                               var sandV = (binding.etSand.text.toString().toFloat()) - material.sandAssumptionL!!
-                               var mudv = (binding.etMudPieces.text.toString().toFloat()) - material.mudPieceAssumptionL!!
-                               var finesV = (binding.etFines.text.toString().toFloat()) - material.finesAssumptionL!!
-                               var burraysV = (binding.etBurrays.text.toString().toFloat()) - material.burraysAssumptionL!!
+                               var moistureV = (binding.etMoisture.text.toString().toFloat()) - material.moistureExemption!!
+                               var sandV = (binding.etSand.text.toString().toFloat()) - material.sandExemption!!
+                               var mudv = (binding.etMudPieces.text.toString().toFloat()) - material.mudPieceExemption!!
+                               var finesV = (binding.etFines.text.toString().toFloat()) - material.finesExemption!!
+                               var burraysV = (binding.etBurrays.text.toString().toFloat()) - material.burraysExemption!!
 
 
                                if(moistureV > 0){
@@ -156,9 +155,9 @@ class Add_Quality_form : AppCompatActivity() {
 
                             }
                              else{
-                                var moistureV = (binding.etMoisture.text.toString().toFloat()) - material.moistureAssumptionL!!
-                                var sandV = (binding.etSand.text.toString().toFloat()) - material.sandAssumptionL!!
-                                var mudv = (binding.etMudPieces.text.toString().toFloat()) - material.mudPieceAssumptionL!!
+                                var moistureV = (binding.etMoisture.text.toString().toFloat()) - material.moistureExemption!!
+                                var sandV = (binding.etSand.text.toString().toFloat()) - material.sandExemption!!
+                                var mudv = (binding.etMudPieces.text.toString().toFloat()) - material.mudPieceExemption!!
 
                                 if(moistureV > 0){
                                     totalDeduction += moistureV

@@ -6,11 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.UZdevelopers.sarghodhapc.R
-import com.UZdevelopers.sarghodhapc.UI.Activities.Add_Assumption_HoldActivity
 import com.UZdevelopers.sarghodhapc.UI.Activities.SelectMaterial
 import com.UZdevelopers.sarghodhapc.databinding.FragmentAdminDashboardBinding
-import com.UZdevelopers.sarghodhapc.databinding.FragmentWeightmentDashboardBinding
 
 class Admin_Dashboard_Fragment : Fragment() {
     lateinit var binding: FragmentAdminDashboardBinding

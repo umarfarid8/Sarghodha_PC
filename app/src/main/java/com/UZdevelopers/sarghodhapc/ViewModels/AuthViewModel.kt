@@ -117,7 +117,7 @@ class AuthViewModel : ViewModel(){
         viewModelScope.launch {
 
             val result=AuthRepository.login(email,password)
-//            val result= AuthRepository().signup("Zhair Ahmad", "zhairdeveloper@gmail.com", "1234567999", "123456")
+//            val result= AuthRepository().signup("Test 2", "admin@gmail.com", "1234567999", "123456")
 
             if (result.isSuccess){
                 val result2=AuthRepository.loadUser()
