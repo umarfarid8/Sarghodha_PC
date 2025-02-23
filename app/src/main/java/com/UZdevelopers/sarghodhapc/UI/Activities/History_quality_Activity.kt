@@ -50,7 +50,7 @@ class History_quality_Activity : AppCompatActivity() {
                 dataList?.let {
                     loadList.clear()
                     it.filterTo(loadList) { item ->
-                        item.processStatus!!.toInt() > 2
+                        item.processStatus!!.toInt() >= 2
                     }
                     adapter.notifyDataSetChanged()
                 }

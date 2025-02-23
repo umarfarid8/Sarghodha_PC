@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
+import com.UZdevelopers.sarghodhapc.Repositories.AuthRepository
 import com.UZdevelopers.sarghodhapc.ViewModels.AuthViewModel
 import com.UZdevelopers.sarghodhapc.databinding.ActivityLoginBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -55,7 +56,6 @@ class LoginActivity : AppCompatActivity() {
             viewModel.loadUser()
         }
 
-//        AuthRepository().signup("Zhair Ahmad", " umerfarid034@gmail.com ", "03444390314", "123456")
 
         binding.forget.setOnClickListener {
             startActivity(Intent(this, ResetPasswordActivity::class.java))
