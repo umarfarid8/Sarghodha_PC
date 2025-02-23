@@ -140,6 +140,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="27dp"
         android:text="Update"
+        android:textColor="@color/white"
         android:backgroundTint="#176AB5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.478"
