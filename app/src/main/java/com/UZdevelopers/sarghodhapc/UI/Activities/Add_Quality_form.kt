@@ -1,5 +1,6 @@
 package com.UZdevelopers.sarghodhapc.UI.Activities
 
+import android.annotation.SuppressLint
 import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
@@ -48,6 +49,7 @@ class Add_Quality_form : AppCompatActivity() {
         binding.vehiccletypeValue.text = LoadData.vechileType
         binding.vehicleNOValue.text = LoadData.vechileNumber
         binding.etDeduction.isEnabled = false
+
 
         val etMoisture = binding.etMoisture
         val etSand = binding.etSand
@@ -101,6 +103,7 @@ class Add_Quality_form : AppCompatActivity() {
                     }
                 }
 
+                @SuppressLint("DefaultLocale")
                 override fun afterTextChanged(s: Editable?) {
                     if(validateRelatedFields()){
                         var totalDeduction = 0.0
@@ -111,9 +114,13 @@ class Add_Quality_form : AppCompatActivity() {
                                etSand.text.toString().toFloat() > material.sandHoldL!! ||
                                etMudPieces.text.toString().toFloat() > material.mudPieceHoldL!!
                                ){ // if limit is higher than above it will be rejected
-                                // add logic for rejected
-                                Log.i("INfo", "Rejected")
+
+
                                 binding.rbHold.isChecked = true
+                               //disable the button so user cannot save entry
+                               binding.buttonSave.isEnabled = false
+                               binding.buttonSave.isClickable = false
+                               Toast.makeText(this@Add_Quality_form, "Rejected Can't Save", Toast.LENGTH_LONG).show()
 
                            } else {
                                var moistureV = (binding.etMoisture.text.toString().toFloat()) - material.moistureExemption!!
@@ -150,8 +157,12 @@ class Add_Quality_form : AppCompatActivity() {
                                 etMudPieces.text.toString().toFloat() > material.mudPieceHoldL!!
                             ){ // if limit is higher than above it will be rejected
                                 // add logic for rejected
-                                Log.i("INfo", "Rejected")
+
                                 binding.rbHold.isChecked = true
+                                //disable the button so user cannot save entry
+                                binding.buttonSave.isEnabled = false
+                                binding.buttonSave.isClickable = false
+                                Toast.makeText(this@Add_Quality_form, "Rejected Can't Save", Toast.LENGTH_LONG).show()
 
                             }
                              else{
@@ -168,7 +179,7 @@ class Add_Quality_form : AppCompatActivity() {
                                 if (mudv > 0)
                                     totalDeduction += mudv
 
-                                binding.etDeduction.setText(totalDeduction.toString())
+                                binding.etDeduction.setText(String.format("%.1f", totalDeduction))
                             }
                         }
 

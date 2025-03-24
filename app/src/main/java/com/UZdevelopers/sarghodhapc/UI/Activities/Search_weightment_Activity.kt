@@ -61,7 +61,10 @@ class Search_weightment_Activity : AppCompatActivity() {
                         progressDialog.dismiss()
                         if(it.processStatus!!.toInt() > 3){
                             Toast.makeText(this@Search_weightment_Activity, "This EP Number is already checked", Toast.LENGTH_SHORT).show()
-                        } else {
+                        } else if(it.processStatus!!.toInt() == 1){
+                            Toast.makeText(this@Search_weightment_Activity, "In Progress", Toast.LENGTH_SHORT).show()
+                        }
+                        else {
                             val intent =
                                 Intent(this@Search_weightment_Activity, TareData_Weightment_Activity::class.java)
                             intent.putExtra("data", Gson().toJson(it))

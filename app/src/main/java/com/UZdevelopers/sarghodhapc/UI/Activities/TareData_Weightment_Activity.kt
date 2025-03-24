@@ -2,6 +2,7 @@ package com.UZdevelopers.sarghodhapc.UI.Activities
 
 import android.app.ProgressDialog
 import android.content.Intent
+import android.icu.text.SimpleDateFormat
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -88,7 +89,8 @@ class TareData_Weightment_Activity : AppCompatActivity() {
                     var payableWeight = netWeight - decution
                     binding.tvPayableWeightValue.text = payableWeight.toString()
                     LoadData.netWeight = netWeight.toString()
-                    LoadData.payableWeight = payableWeight.toString()
+                    LoadData.tareWeightTime = SimpleDateFormat("yyyy-mm-dd HH:MM a").format(System.currentTimeMillis())
+                    LoadData.payableWeight = String.format("%.2f",payableWeight)
                     LoadData.tareWeight = s.toString()
 
                 }
