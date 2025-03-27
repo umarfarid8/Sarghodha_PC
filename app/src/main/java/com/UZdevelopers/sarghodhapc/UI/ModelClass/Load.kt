@@ -20,6 +20,7 @@ class Load(
     var mositureP:String?="-1",
     var sandP:String?="-1",
     var mudPieceP:String?="-1",
+    var tareWeightTime:String?="-1",
     var burraysP:String?="-1",
     var finesP:String?="-1",
     var colorr:String?="--", // light, dark Brown
